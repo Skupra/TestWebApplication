@@ -1,0 +1,432 @@
+Style.css
+body {
+    background: #FFD723 url(images/horus.jpg) repeat-x;
+	font: 13px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+#header {     
+     width: 100%;
+     height: 400px;
+     background: url(image3.png) no-repeat top center;
+} 
+#container {
+     background: #FFD700;
+     margin: auto auto;
+     text-align: center;
+     width: 80%;
+     height: 100%;
+} 
+#navigation {
+     background: #FE9798;
+     width: 100%;
+     height: 25%;
+} 
+#sidebar {
+     background: #40E0D0;
+     float: left;
+     width: 15%;
+     height: 60%;
+}
+#content {
+     background: #DCDCDC;
+     float: right;
+     width: 85%;
+     height: 600px;
+} 
+#clear {
+     clear: both;
+} 
+#footer {
+	height: 44px;
+	clear: both;
+	padding-top: 20px;
+	background: url(images/footer.gif) repeat-x;
+	border-top: 5px solid #A6640E;
+}
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+}
+#footer a {
+	color: #ffffff;
+}
+#menu
+{
+	border-left: 2px solid #FFFFFF;
+	width: 100%;
+	height: 80px;	
+}
+#sidebar h3
+{
+width: 225px;
+height: 25px;
+font-size: 14px;
+font-weight: bold;
+padding-left: 15px;
+padding-top: 15px;
+text-transform: uppercase;
+color: #ffffff;
+background: url(images/title.gif) no-repeat
+}
+#sidebar ul {
+	margin: 0;
+	padding: 10px;
+	list-style: none;
+	width: 120px;
+	font-size: 18px;
+}
+#sidebar li ul {
+	position: absolute;
+	left: 90px;
+	top: 0;
+	display: none;
+}
+#sidebar ul li {
+	position: relative;
+	margin-bottom:20px;
+} 
+#sidebar ul li a {
+	display: block;
+	text-decoration: none;
+	color: #ffffcc;
+	background: #ff9900;
+	padding: 5px;
+	border: 1px solid gold;
+	border-bottom: 0;
+} 
+#sidebar li:hover ul {
+	display: block;
+} 
+#sidebar li li {
+	margin-bottom:0px;
+	width: 150px;
+}
+#sidebar p
+{	padding: 10px;
+	border-bottom: 1px solid #D72020;
+	border-left: 1px solid #D72020;
+	border-right: 1px solid #D72020;
+}
+
+Priem.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Блочная вёрстка</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">		 
+	<div id="navigation">	
+		<table id="menu">
+		<tr>			<td><a href="torta.html"  title="">Главная</a></td>
+			<td><a href="priem.html"  title="">Купить Абонемент</a></td>
+			<td><a href="tren.html"  title="">Тренировки</a></td>
+			<td><a href="rasp.html"  title="">Расчёт тренировки</a></td>
+                        <td><a href="con.html"  title="">Контакты</a></td>
+			<td><a href="news.html"  title="">Новости</a></td>
+					</tr>
+		</table>	
+	</div>
+	<div id="header">
+	<p>Фитнес клуб "Невский"</p>
+	<div class="slides">            
+	</div>
+	</div>		 
+	<div id="sidebar">
+	<h3>Тренировки</h3>
+		<ul>				<li><a href="#">Силовые Программы</a>
+                                <ul>
+						<li><a href="abs30.html">ABS-30</a>	
+						<li><a href="abss.html">ABS+STRECH</a></li>
+						<li><a href="total.html">TOTAL CONDITION</a></li>
+						<li><a href="bikini.html">BIKINI+ABS</a></li>
+						</li>
+											</ul>
+                                </li>				<li><a href="#">Смешанные тренировки</a>
+					<ul>
+						<li><a href="ft.html">FT (FUNCTIONAL TRAINING)</a></li>
+						<li><a href="bosu.html">BOSU</a></li>
+						<li><a href="metab.html">METABOLIC TRAINING</a></li>
+						<li><a href="hiit.html">HIIT</a></li>
+											</ul>
+				</li>
+				<li><a href="#">Спортивные направления</a>
+					<ul>
+						<li><a href="zumba.html">ZUMBA</a></li>
+						<li><a href="dance.html">DANCE MIX</a></li>
+						<li><a href="salsa.html">SALSA/BACHATA</a></li>						
+					</ul>
+				</li>				
+		</ul>
+	</div>		 
+	<div id="content">
+	<h2>Покупка Абонемента</h2><br />
+	<form action="kak.html" method="post" name="exampleform" >
+<table align="center">
+<thead>
+<tr>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Первый день Тренировки:</td>
+<td><input type="date" name="created" required></td>
+</tr>
+<tr>
+<tr>
+<td>Кол-во дней Тренировки:</td>
+<td><input type="text" name="kolvo" size="4"
+maxlength="4" required></td>
+</tr>
+<tr>
+<td>Ф.И.О.:</td>
+<td><input type="text" name="fio" size="25"
+maxlength="50" required></td>
+</tr>
+<tr>
+<td>Адрес эл. почты:</td>
+<td><input type="text" name="email" size="25"
+maxlength="25"required></td>
+</tr>
+<tr>
+<td>Адрес:</td>
+<td><input name="adress" name="password" size="25"
+maxlength="50" ></td>
+</tr>
+<tr>
+<td>Пол:</td>
+<td><input type="radio" name="sex" value="male">Мужской
+<input type="radio" name="sex" value="female">Женский</td>
+</tr>
+<tr>
+<td>Время</td>
+<td><select name="lang">
+<option value="1">8:00 - 11:00</option>
+<option value="2">11:00 - 14:00</option>
+<option value="3">14:00 - 17:00</option>
+<option value="4">17:00 - 20:00</option>
+<option value="5">20:00 - 23:00</option>
+</select>
+</td></tr>
+
+<tr>
+<td>Тренировки</td>
+<td>
+<label>
+<input name="opt1"type="checkbox">ABS-30<br>
+<input name="opt2"type="checkbox">ABS+STRETCH<br>
+<input name="opt3"type="checkbox">TOTAL CONDITION<br>
+<input name="opt4"type="checkbox">BIKINI+ABS<br>
+<input name="opt5"type="checkbox">FT (FUNCTIONAL TRAINING)<br>
+<input name="opt6"type="checkbox">BOSU<br>
+<input name="opt7"type="checkbox">METABOLIC TRAINING<br>
+<input name="opt8"type="checkbox">HIIT<br>
+<input name="opt9"type="checkbox">ZUMBA<br>
+<input name="opt10"type="checkbox">DANCE MIX<br>
+<input name="opt11"type="checkbox">SALSA/BACHATA<br>
+<input name="opt12"type="checkbox">Не могу выбрать<br>
+</label>
+<tr>
+<td>Дополнения </td>
+<td><textarea name="content" cols="25" wrap="physical">
+</textarea></td>
+</tr>
+<tr>
+<td><input type="submit" value="Отправить"></input></td>
+<td><input type="reset" value="Очистить"></td>
+</tr>
+</tbody>
+</table>
+</form>	
+	</div>		 
+	<div id="clear">
+		 </div>							   
+	<div id="footer">
+	<h2>Фитнес Клуб "Невский" г.Сызрань</h2>
+	</div>
+</div>
+</body>
+</html>
+
+Rasp.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Блочная вёрстка</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">		 
+	<div id="navigation">	
+		<table id="menu">
+		<tr>
+			<td><a href="torta.html"  title="">Главная</a></td>
+			<td><a href="priem.html"  title="">Купить Абонемент</a></td>
+			<td><a href="tren.html"  title="">Тренировки</a></td>
+			<td><a href="rasp.html"  title="">Расчёт тренировки</a></td>
+                        <td><a href="con.html"  title="">Контакты</a></td>
+			<td><a href="news.html"  title="">Новости</a></td>
+					</tr>
+		</table>	
+	</div>
+	<div id="header">
+	<p>Фитнес клуб "Невский"</p>
+	<div class="slides">            
+	</div>
+	</div>		 
+	<div id="sidebar">
+	<h3>Тренировки</h3>
+		<ul>
+				<li><a href="#">Силовые Программы</a>
+                                <ul>
+						<li><a href="abs30.html">ABS-30</a>	
+						<li><a href="abss.html">ABS+STRECH</a></li>
+						<li><a href="total.html">TOTAL CONDITION</a></li>
+						<li><a href="bikini.html">BIKINI+ABS</a></li>
+						</li>
+											</ul>
+                                </li>
+				<li><a href="#">Смешанные тренировки</a>
+					<ul>
+						<li><a href="ft.html">FT (FUNCTIONAL TRAINING)</a></li>
+						<li><a href="bosu.html">BOSU</a></li>
+						<li><a href="metab.html">METABOLIC TRAINING</a></li>
+						<li><a href="hiit.html">HIIT</a></li>
+											</ul>
+				</li>
+				<li><a href="#">Спортивные направления</a>
+					<ul>
+						<li><a href="zumba.html">ZUMBA</a></li>
+						<li><a href="dance.html">DANCE MIX</a></li>
+						<li><a href="salsa.html">SALSA/BACHATA</a></li>	
+					</ul>
+				</li>
+			</ul>
+	</div>		 
+	<div id="content">
+	<h2>Расчёт</h2><br />
+	<p>Калькулятор примерного расчета количества дней</p>
+	<div>
+    	<input value="10" type="number" id="chislo" required> кол-во дней для тренировок; <br /> <br /> 
+	<select id="spisok"> <!-- id="spisok" - уникальный идентификатор, по нему мы будем обращаться, чтобы 	выцепить данные из полей выбора -->
+        <option value="1">8:00 - 11:00</option>
+        <option value="2" selected>11:00 - 14:00</option>  <!-- аттрибут selected отвечает за пункт, 	выбранный по умолчанию -->
+        <option value="3">14:00 - 17:00</option> <!-- value = значения, которые соответствуют пунктам списка. 	-->
+        <option value="4">17:00 - 20:00</option>
+	<option value="5">20:00 - 23:00</option>
+    	</select> - время дня; <br /> <br />	
+	<select id="spisoks"> <!-- id="spisoks" - уникальный идентификатор, по нему мы будем обращаться, 	чтобы 	выцепить данные из полей выбора -->
+        <option value="10">ABS-30</option>
+        <option value="12" selected>ABS+STRETCH</option>  <!-- аттрибут selected отвечает за пункт, 			выбранный по умолчанию -->
+        <option value="13">TOTAL CONDITION</option> <!-- value = значения, которые соответствуют пунктам 	списка. 	-->
+        <option value="14">BIKINI+ABS</option>
+	<option value="15">BOSU</option>
+	<option value="16">FT (FUNCTIONAL TRAINING)</option>
+	<option value="17">METABOLIC TRAINING</option>
+	<option value="18">HIIT</option>
+	<option value="19">ZUMBA</option>
+	<option value="20">DANCE MIX</option>
+	<option value="21">SALSA/BACHATA</option>		
+    	</select> - вид тренировки; <br /> <br />
+	<button onclick="Start();">Рассчитать!</button> <br/> <br /> <!-- задаем выполнение функции Start при 	клике на кнопку -->     
+    	<div style="font-weight:bold" id="result"></div> <!-- контейнер для вывода результатов -->
+	</div>	
+	<script>
+	function Start(){
+		var chislo = document.getElementById('chislo').value; //выцепляем значение value первого 	вводимого поля
+		var spisok = document.getElementById('spisok').value; //выцепляем значение value множителя из 	списка
+		var spisoks = document.getElementById('spisoks').value; //выцепляем значение value множителя 	из списка		
+		var result = chislo * spisok * spisoks * 10; //элемент первого поля умножаем на значение из списка 	и прибавляем значение из следующего списка. Промежуточный результат сохраняем в result				document.getElementById('result').innerHTML = 'Результат: ' + result; 	//выводим получившееся значение в div с id="result"
+	}
+	</script>	
+	</div>		 
+	<div id="clear">		 
+	</div>							   
+	<div id="footer">
+	<h2>Фитнес Клуб "Невский" г.Сызрань</h2>
+	</div>
+</div>
+</body>
+</html>
+
+Torta.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Блочная вёрстка</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">		 
+	<div id="navigation">	
+		<table id="menu">
+		<tr>
+			<td><a href="torta.html"  title="">Главная</a></td>
+			<td><a href="priem.html"  title="">Купить Абонемент</a></td>
+			<td><a href="tren.html"  title="">Тренировки</a></td>
+			<td><a href="rasp.html"  title="">Расчёт тренировки</a></td>
+                        <td><a href="conv.html"  title="">Контакты</a></td>
+			<td><a href="news.html"  title="">Новости</a></td>
+					</tr>
+		</table>	
+	</div>
+	<div id="header">
+	<p>Фитнес клуб "Невский"</p>
+	<div class="slides">            
+	</div>
+	</div>		 
+	<div id="sidebar">
+	<h3>Тренировки</h3>
+		<ul>
+				<li><a href="#">Силовые Программы</a>
+                                <ul>
+						<li><a href="abs30.html">ABS-30</a>	
+						<li><a href="abss.html">ABS+STRECH</a></li>
+						<li><a href="total.html">TOTAL CONDITION</a></li>
+						<li><a href="bikini.html">BIKINI+ABS</a></li>
+						</li>
+											</ul>                                </li>
+				<li><a href="#">Смешанные тренировки</a>
+					<ul>
+						<li><a href="ft.html">FT (FUNCTIONAL TRAINING)</a></li>
+						<li><a href="bosu.html">BOSU</a></li>
+						<li><a href="metab.html">METABOLIC TRAINING</a></li>
+						<li><a href="hiit.html">HIIT</a></li>
+											</ul>
+				</li>
+				<li><a href="#">Спортивные направления</a>
+					<ul>
+						<li><a href="zumba.html">ZUMBA</a></li>
+						<li><a href="dance.html">DANCE MIX</a></li>
+						<li><a href="salsa.html">SALSA/BACHATA</a></li>	
+					</ul>
+				</li>	</ul>
+	</div>		 
+	<div id="content">
+	<h2>Главная</h2><br />
+	<h3>Фитнес Клуб "Невский"</h3><br />
+                <p>Фитнес Клуб "Невский" это первый современный фитнес-клуб нового формата, соответствующий требованиям и ожиданиям жителей самого динамично развивающегося района г. Сызрань.</p>
+
+<p>Наш клуб сочетает в себе максимально удобное расположение, комфортные условия для занятий, предлагает полный спектр фитнес-услуг на высоком уровне и предоставляет уникальную возможность погрузиться в атмосферу здорового образа жизни каждому человеку.</p>
+
+<p>Философия нашего бренда заключается в том, что человек сам создает свою жизнь, а наш клуб и регулярные занятия в нем помогают сделать ее наполненной радостью, красотой, здоровьем и благополучием. Поэтому наш девиз звучит так: «Создай свое будущее».</p>	
+	</div>		 
+	<div id="clear">		 
+	</div>							   
+	<div id="footer">
+	<h2>Фитнес Клуб "Невский" г.Сызрань</h2>
+	</div>
+</div>
+</body>
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 
