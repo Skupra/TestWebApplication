@@ -1,0 +1,124 @@
+        [Test]
+        public void testCalc1()
+        {
+            driver.Url = "file:///E:/Тестирование/сайт/сайт%20сапрыкину/rasp.html";
+            Thread.Sleep(2000);
+            IWebElement Kolvo = driver.FindElement(By.Id("chislo"));
+            Kolvo.SendKeys("10");
+            Thread.Sleep(2000);
+            IWebElement Spis = driver.FindElement(By.Id("spisok"));
+            SelectElement select = new SelectElement(Spis);
+            System.Collections.Generic.IList<OpenQA.Selenium.IWebElement> options = select.Options;
+            select.SelectByText("20:00 - 23:00");
+            Thread.Sleep(2000);
+            IWebElement Spiso = driver.FindElement(By.Id("spisoks"));
+            select = new SelectElement(Spiso);
+            options = select.Options;
+            select.SelectByText("ZUMBA");
+            Thread.Sleep(2000);
+            IWebElement Rass = driver.FindElement(By.Id("sumbit"));
+            Rass.Click();
+            String chisl = Spis.GetAttribute("value");
+            Assert.AreEqual(chisl,"5");
+        }
+        [Test]
+        public void testCalc2()
+        {
+            driver.Url = "file:///E:/Тестирование/сайт/сайт%20сапрыкину/rasp.html";
+            Thread.Sleep(5000);
+            IWebElement Rass = driver.FindElement(By.Id("sumbit"));
+            Rass.Click();
+        }
+        [Test]
+        public void testPriem()
+        {
+            driver.Url = "file:///E:/Тестирование/сайт/сайт%20сапрыкину/priem.html";
+            IWebElement Date = driver.FindElement(By.Id("date"));
+            Date.SendKeys("28092019");
+            Thread.Sleep(5000);
+            IWebElement Kolvo = driver.FindElement(By.Id("kolvo"));
+            Kolvo.SendKeys("10");
+            Thread.Sleep(1000);
+            IWebElement FIO = driver.FindElement(By.Id("fio"));
+            FIO.SendKeys("Пчелкин Алексей Витальевич ");
+            Thread.Sleep(1000);
+            IWebElement Adress = driver.FindElement(By.Id("email"));
+            Adress.SendKeys("pchelkinav@mail.ru");
+            IWebElement Spis = driver.FindElement(By.Id("vrem"));
+            SelectElement select = new SelectElement(Spis);
+            System.Collections.Generic.IList<OpenQA.Selenium.IWebElement> options = select.Options;
+            select.SelectByText("8:00 - 11:00");
+            Thread.Sleep(1000);
+            IWebElement Delete = driver.FindElement(By.Id("clear"));
+            Delete.Click();
+
+            string Spis1 = Spis.GetAttribute("value");
+            Assert.AreEqual(Spis1, "");
+        }
+        [Test]
+        public void testPriemNew()
+        {
+            driver.Url = "file:///E:/Тестирование/сайт/сайт%20сапрыкину/priem.html";
+            IWebElement Date = driver.FindElement(By.Id("date"));
+            Date.SendKeys("28092019");
+            Thread.Sleep(5000);
+            IWebElement Kolvo = driver.FindElement(By.Id("kolvo"));
+            Kolvo.SendKeys("10");
+            Thread.Sleep(5000);
+            IWebElement FIO = driver.FindElement(By.Id("fio"));
+            FIO.SendKeys("Пчелкин Алексей Витальевич ");
+            Thread.Sleep(5000);
+            IWebElement Adress = driver.FindElement(By.Id("email"));
+            Adress.SendKeys("pchelkinav@mail.ru");
+            Thread.Sleep(5000);
+            IWebElement Spis = driver.FindElement(By.Id("vrem"));
+            SelectElement select = new SelectElement(Spis);
+            System.Collections.Generic.IList<OpenQA.Selenium.IWebElement> options = select.Options;
+            select.SelectByText("11:00 - 14:00");
+            IWebElement Pol = driver.FindElement(By.Id("men"));
+            Pol.Click();
+            Thread.Sleep(5000);
+            IWebElement Open = driver.FindElement(By.Id("sumbit"));
+            Open.Click();
+            string Spis1 = Spis.GetAttribute("value");
+            Assert.AreEqual(Spis1, "2");
+        }
+        [Test]
+        public void testPriemVipad()
+        {
+            driver.Url = "file:///E:/Тестирование/сайт/сайт%20сапрыкину/priem.html";
+            IWebElement Date = driver.FindElement(By.Id("date"));
+            Date.SendKeys("28092019");
+            Thread.Sleep(1000);
+            IWebElement Kolvo = driver.FindElement(By.Id("kolvo"));
+            Kolvo.SendKeys("10");
+            Thread.Sleep(5000);
+            IWebElement Pol = driver.FindElement(By.Id("men"));
+            Pol.Click();
+            Thread.Sleep(1000);
+            IWebElement Spis = driver.FindElement(By.Id("vrem"));
+            SelectElement select = new SelectElement(Spis);
+            System.Collections.Generic.IList<OpenQA.Selenium.IWebElement> options = select.Options;
+            select.SelectByText("11:00 - 14:00");
+            IWebElement tren = driver.FindElement(By.Id("total"));
+            tren.Click();
+            Thread.Sleep(1000);
+            IWebElement Open = driver.FindElement(By.Id("sumbit"));
+            Open.Click();
+            string Spis1 = Spis.GetAttribute("value");
+            Assert.AreEqual(Spis1, "2");
+
+        }
+        [Test]
+        public void testVideo()
+        {
+            driver.Url = "file:///E:/Тестирование/сайт/сайт%20сапрыкину/tren.html";
+            IWebElement Open = driver.FindElement(By.Id("tren"));
+            Open.Click();
+            IWebElement Video = driver.FindElement(By.Id("vid"));
+            Video.Click();
+            //IWebElement Sideo = driver.FindElement(By.Id("video"));
+            // Sideo.Click();
+
+        }
+ 
